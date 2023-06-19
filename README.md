@@ -46,7 +46,8 @@ Technical specifications:
   
 <a name="scenarios"/>
 <h1>Test Cases/Scenarios</h1>
-Manual Testing Coverage: 
+
+Manual Testing Coverage:
 
 - TC01: Website loads correctly without any issues and all elements are present.
 - TC02: Open the website and check that the login form is displayed correctly with the logo and the graphics at the bottom with the text "The Thinking Tester".
