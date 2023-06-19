@@ -1,7 +1,17 @@
 # Technical-Exercise-Submission-Kubernetes
 Demonstration of my skills and understanding in manual and automated testing, test case preparation, and API testing. This is for the Software Engineer in Test at UltimateQA. 
 
-# 1. Functional Requirements
+##### Table of Contents  
+[Functional Requirements](#functional)  
+[Plan](#plan)    
+[Test Cases/Scenarios](#scenarios)
+[Code Quality](#quality)
+[API Testing](#api)
+[Test Reporting](#reports)
+[How to use this repo](#howto) 
+
+<a name="functional"/>
+# Functional Requirements
 
 - Web application loads correctly.
 - Ensure graphics and logos are visible.
@@ -15,8 +25,9 @@ Demonstration of my skills and understanding in manual and automated testing, te
 - New contact details have validation in force for birthday and postcode.
 - Ensure input fields have placeholders.
 - Perform API testing using the 'Contacts List Documentation'.
-
-# 2. Test Plan
+  
+<a name="plan"/>
+# Test Plan
 
 We have several requirements covered by automation testing, manual testing, and API testing with the report showing results for each. I have done a small exercise to decide which tests will be automated and which will be covered only by manual testing. Each requirement has been refined and converted into cucumber test cases (TC).
 
@@ -30,7 +41,8 @@ Technical specifications:
 - API Cypress Plugin used for Postman-like integration with Cypress for automation purposes.
 - Postman was used for Manual API testing done prior to automating the collection.
 - Report used is Mochaweseome HTML Report
-
+  
+<a name="scenarios"/>
 # 3. Test Cases/Scenarios
 Manual Testing Coverage:
 - TC01: Website loads correctly without any issues and all elements are present.
@@ -49,22 +61,25 @@ Automated Testing Coverage:
 
 API Automated Test Coverage:
 - TC12: Ensure that we can add, update, get and delete contacts using API.
-
+  
+<a name="quality"/>
 # 4. Code Quality
 
 For all my file naming I have used camel case  to separate the words in a phrase by making the first letter of each word capitalized and not using spaces. I have structured my directory to be easily readable. 
 
 I have utilized object oriented page-object modeling method to create a keyword-driven automation framework for each page, method and action used in this example. This creates a clean, efficient and maintainable codebase with the least amount of technical debt. 
 
+<a name="api"/>
 # 5. API Testing
 
 I have used Postman to manually create my API calls. Once I got them to work, I installed and configured the Cypress-API plugin to start automating this API test collection as part of the automation testing strategy. In the end, the API tests are now automated.
 
+<a name="reports"/>
 # 6. Test Reporting
 
 I have installed and configured the Mochaweseome Test Reporting facility to create a readable report on the automated tests. For manual testing, I would normally use Jira to create and monitor bug tickets but in this example, I don't have access to Jira. 
 
-
+<a name="howto"/>
 # 7. How to use this repo:
 
 - Simple clone and open this Git repository on your own local PC/Laptop and open in any modern IDE. 
