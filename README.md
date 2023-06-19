@@ -4,7 +4,7 @@ Demonstration of my skills and understanding in manual and automated testing, te
 <h2>Table of Contents</h2>
 
 [Functional Requirements](#functional)<br/>
-[Plan](#plan)<br/> 
+[Test Plan](#plan)<br/> 
 [Test Cases/Scenarios](#scenarios)<br/> 
 [Code Quality](#quality)<br/> 
 [API Testing](#api)<br/> 
