@@ -3,6 +3,11 @@ import loginPage from "../../PageObjectModels/loginPage";
 import addUserPage from "../../PageObjectModels/addUserPage";
 import contactListPage from "../../PageObjectModels/contactListPage";
 
+const uuid = () => Cypress._.random(0, 1e2)
+const id = uuid()
+const randomEmail = `randomEmail${id}`
+
+
 Given ('User is located on the new user registration', () =>{
     cy.visit('https://thinking-tester-contact-list.herokuapp.com/');
     loginPage.headingTitle.checkIsDisplayed();
@@ -13,7 +18,7 @@ When ('User fills all required details correctly', () =>{
     addUserPage.headingTitle.checkIsDisplayed();
     addUserPage.signUpHtmlForm.firstName("Michael");
     addUserPage.signUpHtmlForm.lastName("Williams");
-    addUserPage.signUpHtmlForm.email("michael.williams@testing.com");
+    addUserPage.signUpHtmlForm.email("michael.williams@"+randomEmail+".com");
     addUserPage.signUpHtmlForm.password("password2023");
 })
 

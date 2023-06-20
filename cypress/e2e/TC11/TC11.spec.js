@@ -1,12 +1,16 @@
 import {Given, When, Then, And} from "cypress-cucumber-preprocessor/steps";
 import apiToken from "../../fixtures/apiToken.json";
+import loginPage from "../../PageObjectModels/loginPage";
+import listOfEmails from "../../fixtures/listOfEmails.json";
+import listOfPasswords from "../../fixtures/listOfPasswords.json";
+import contactListPage from "../../PageObjectModels/contactListPage";
 
 let respCode;
 let respBody;
 let contactId;
 let updatedBody;
 
-Given ('User wants to create a new contact via API', () =>{
+Given ('User wants to create a new contact via API', () => {
 //Placeholder
 })
 
@@ -44,7 +48,12 @@ Then ('200 status code response is received', () =>{
 })
 
 Given ('User wants to check that the new contact has been created', () =>{
-//Placeholder
+    cy.visit('https://thinking-tester-contact-list.herokuapp.com/');
+    loginPage.headingTitle.checkIsDisplayed();
+    loginPage.loginHtmlForm.enterEmail(listOfEmails.validEmail);
+    loginPage.loginHtmlForm.enterPassword(listOfPasswords.validPassword);
+    loginPage.loginHtmlForm.clickSubmit();
+    contactListPage.headingTitle.checkIsDisplayed();
 })
 
 When ('GET call is sent with all expected details inside the JSON body', () =>{

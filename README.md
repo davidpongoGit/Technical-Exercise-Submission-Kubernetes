@@ -53,6 +53,8 @@ Manual Testing Coverage:
 - TC02: When entering the website, you should not be logged in by default and should have the options visible to either log in or sign up.
 - TC03: Ensure all input fields on the login path and sign-up path have placeholders.
 
+The manual tests will pass when ran as e2e automation because there is no test step implementation. 
+
 Automated Testing Coverage:
 - TC04: Entering an incorrect email or password will display an error message.
 - TC05: Existing user account is able to log in successfully.
@@ -76,6 +78,8 @@ I have utilized object oriented page-object modeling method to create a keyword-
 <h1>API Testing</h1>
 
 I have used Postman to manually create my API calls. Once I got them to work, I installed and configured the Cypress-API plugin to start automating this API test collection as part of the automation testing strategy. In the end, the API tests are now automated.
+When you run the tests, API calls will throw 403 status code because my Bearer token would have expired. To get it to work, simply login, then inspect cookies and copy the token value. Replace the copied token value 
+with the string inside fixtures/apiToken.json and the  run the command "npm run api". The API tests will work.
 
 <a name="reports"/>
 <h1>Test Reporting</h1>
@@ -89,8 +93,10 @@ I have installed and configured the Mochaweseome Test Reporting facility to crea
 - Ensure you have Node installed. 
 - Open the terminal within your IDE and run the following commands:
 - 'npm install'
-- To run all tests, wait for the previous command to finish and then run 'npm run tests' 
+- To run all tests, wait for the previous command to finish and then run 'npm run e2e' 
+- To only run the API tests, run this command 'npm run api'
+- To open the Cypress Automation Tool and select your test to run automatically, run this command 'npm run cypress-ui'
 
 View my e2e folder for all feature files which will hold the manual test cases. Automated test cases including API testing will be triggered automatically as soon as you run the 'npm run tests'.
 
-You can view the test report by opening the //TODO..............
+You can view the test report by opening the reports folder and open the index.html in any web browser. 

@@ -13,8 +13,17 @@ module.exports = defineConfig({
     runMode: 1,
     openMode: 0
   },
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'Technical Exercise Submission Test Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       return require ('./cypress/plugins/index.js')(on, config)
     },
     specPattern: 'cypress/e2e/**/*.feature',

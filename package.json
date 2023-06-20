@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cypress-ui": "cypress open",
-    "e2e": "cypress run --headless --browser chrome"
+    "e2e": "cypress run --headless --browser chrome",
+    "api": "cypress run --spec cypress/e2e/TC11.feature"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "cypress": "^12.14.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.5.1",
     "cypress-plugin-api": "^2.11.1"
   },
   "cypress-cucumber-preprocessor": {
