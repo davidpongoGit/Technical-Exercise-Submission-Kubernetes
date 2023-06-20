@@ -1,0 +1,28 @@
+{
+  "name": "technical-exercise-submission-kubernetes",
+  "version": "1.0.0",
+  "description": "Demonstration of my skills and understanding in manual and automated testing, test case preparation, and API testing. This is for the Software Engineer in Test at UltimateQA.",
+  "main": "index.js",
+  "scripts": {
+    "cypress-ui": "cypress open",
+    "e2e": "cypress run --headless --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidpongoGit/Technical-Exercise-Submission-Kubernetes.git"
+  },
+  "author": "David Pongo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidpongoGit/Technical-Exercise-Submission-Kubernetes/issues"
+  },
+  "homepage": "https://github.com/davidpongoGit/Technical-Exercise-Submission-Kubernetes#readme",
+  "devDependencies": {
+    "cypress": "^12.14.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e"
+  }
+}
