@@ -8,6 +8,9 @@ class contactListPage {
     headingTitle = {
         checkIsDisplayed : () => cy.get('h1').should('contain', 'Contact List')
     }
+    get checkTableIsEmpty(){
+        return cy.get('#myTable > tr:nth-child(3) > td:nth-child(2)').should('not.exist');
+    }
     nameColumn = {
         firstRow : (value) => cy.get('#myTable > tr:nth-child(3) > td:nth-child(2)').should('contain', value),
         secondRow : (value) => cy.get('#myTable > tr:nth-child(4) > td:nth-child(2)').should('contain', value),

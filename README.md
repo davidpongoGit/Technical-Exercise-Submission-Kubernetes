@@ -60,7 +60,7 @@ Automated Testing Coverage:
 - TC07: New user account email field has validation for email type. Without entering @ the sign-up should not work.
 - TC08: Entering all correct details on the signup page allows users to sign up to create a new account.
 - TC09: New user is able to add contact details by clicking on Add Contact Details. The table should be empty beforehand. 
-- TC10: New contact details have validation in force for birthday and postcode.
+- TC10: New contact details have validation in force for email and postcode.
 
 API Automated Test Coverage:
 - TC11: Ensure that we can add, update, get and delete contacts using API.

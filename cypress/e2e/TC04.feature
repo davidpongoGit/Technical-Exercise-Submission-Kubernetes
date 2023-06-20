@@ -2,7 +2,7 @@
 
   Feature: Entering an incorrect email or password for existing user will display an error message
 
-    Background: New user is created prior to test both valid and invalid paths
+    Background: An existing user must be created prior to test both valid and invalid paths
 
     Scenario: Test login page with invalid credentials
       Given User has opened the login page of Contact List App
