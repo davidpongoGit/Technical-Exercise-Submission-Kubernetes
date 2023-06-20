@@ -9,7 +9,9 @@ Demonstration of my skills and understanding in manual and automated testing, te
 [Code Quality](#quality)<br/> 
 [API Testing](#api)<br/> 
 [Test Reporting](#reports)<br/> 
-[How to use this repo](#howto)<br/> 
+[How to use this repo](#howto)<br/>
+[Recommendations](#recommendations)<br/>
+
 
 
 <a name="functional"/>
@@ -79,7 +81,7 @@ I have utilized object oriented page-object modeling method to create a keyword-
 
 I have used Postman to manually create my API calls. Once I got them to work, I installed and configured the Cypress-API plugin to start automating this API test collection as part of the automation testing strategy. In the end, the API tests are now automated.
 When you run the tests, API calls will throw 403 status code because my Bearer token would have expired. To get it to work, simply login, then inspect cookies and copy the token value. Replace the copied token value 
-with the string inside fixtures/apiToken.json and the  run the command "npm run api". The API tests will work.
+with the string inside fixtures/apiToken.json and the  run the command "npm run api". The API tests will work. I only had around 5 hours to do this and therefore, there are areas for improvement.
 
 <a name="reports"/>
 <h1>Test Reporting</h1>
@@ -97,6 +99,14 @@ I have installed and configured the Mochaweseome Test Reporting facility to crea
 - To only run the API tests, run this command 'npm run api'
 - To open the Cypress Automation Tool and select your test to run automatically, run this command 'npm run cypress-ui'
 
-View my e2e folder for all feature files which will hold the manual test cases. Automated test cases including API testing will be triggered automatically as soon as you run the 'npm run tests'.
+View my e2e folder for all feature files which will hold the manual test cases. Automated test cases including API testing will be triggered automatically as soon as you run the 'npm run e2e'.
 
 You can view the test report by opening the reports folder and open the index.html in any web browser. 
+
+<a name="recommendations"/>
+<h1>Recommendations</h1>
+
+- Use Scenario Outline so that some acceptance criteria do not repeat themselves
+- Do not store api token locally like I did and generate a new JWT token each time a new API is run. This can be done via using the before class.
+
+
