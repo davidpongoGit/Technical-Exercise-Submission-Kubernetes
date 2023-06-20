@@ -50,21 +50,20 @@ Technical specifications:
 Manual Testing Coverage:
 
 - TC01: Website loads correctly without any issues and all elements are present.
-- TC02: Open the website and check that the login form is displayed correctly with the logo and the graphics at the bottom with the text "The Thinking Tester".
-- TC03: When entering the website, you should not be logged in by default and should have the options visible to either log in or sign up.
-- TC04: Ensure all input fields on the login path and sign-up path have placeholders.
+- TC02: When entering the website, you should not be logged in by default and should have the options visible to either log in or sign up.
+- TC03: Ensure all input fields on the login path and sign-up path have placeholders.
 
 Automated Testing Coverage:
-- TC05: Entering an incorrect email or password will display an error message.
-- TC06: Existing user account is able to log in successfully.
-- TC07: New user account registration form requires all fields to be completed, otherwise an error message is displayed.
-- TC08: New user account email field has validation for email type. Without entering @ the sign-up should not work.
-- TC09: Entering all correct details on the signup page allows users to sign up to create a new account.
-- TC10: New user is able to add contact details by clicking on Add Contact Details. The table should be empty beforehand. 
-- TC11: New contact details have validation in force for birthday and postcode.
+- TC04: Entering an incorrect email or password will display an error message.
+- TC05: Existing user account is able to log in successfully.
+- TC06: New user account registration form requires all fields to be completed, otherwise an error message is displayed.
+- TC07: New user account email field has validation for email type. Without entering @ the sign-up should not work.
+- TC08: Entering all correct details on the signup page allows users to sign up to create a new account.
+- TC09: New user is able to add contact details by clicking on Add Contact Details. The table should be empty beforehand. 
+- TC10: New contact details have validation in force for birthday and postcode.
 
 API Automated Test Coverage:
-- TC12: Ensure that we can add, update, get and delete contacts using API.
+- TC11: Ensure that we can add, update, get and delete contacts using API.
   
 <a name="quality"/>
 <h1>Code Quality</h1>
