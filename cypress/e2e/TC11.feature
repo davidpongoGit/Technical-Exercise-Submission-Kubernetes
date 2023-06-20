@@ -12,13 +12,13 @@
       Scenario: GET newly created contact as per the expected payload
         Given User wants to check that the new contact has been created
         When GET call is sent with all expected details inside the JSON body
-        Then 200 status code response is received showing all contact details
+        Then 200 status code response is received showing contact details have been created
 
       Scenario: UPDATE existing contact
         Given User wants to update existing contact via API
         When PUT call is sent with all required changes inside the JSON body
         Then 200 status code response is obtained
-        And GET call is sent to check that all received details are matching our new changes
+        And check that all received details are matching our new changes
 
       Scenario: DELETE existing contact
         Given User wants to delete existing contact via API
