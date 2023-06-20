@@ -17,7 +17,7 @@
       Scenario: UPDATE existing contact
         Given User wants to update existing contact via API
         When PUT call is sent with all required changes inside the JSON body
-        Then 200 status code response is received
+        Then 200 status code response is obtained
         And GET call is sent to check that all received details are matching our new changes
 
       Scenario: DELETE existing contact
